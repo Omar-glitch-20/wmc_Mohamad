@@ -1,0 +1,168 @@
+<html lang="de"> 
+<head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <title>Über Mich – Omar Mohamad</title> 
+
+  <style> 
+    :root { 
+      --bg: #1e293b;       /* Dunkelblau-Grau */
+      --card: #334155;     /* Abgesetztes Dunkelgrau */
+      --text: #f1f5f9;     /* Sehr helles Grau */
+      --muted: #cbd5e1;    /* Gedämpftes Grau */
+      --accent: #f59e0b;   /* Orange (Amber) */
+    }
+
+    * { box-sizing: border-box; }
+
+    body { 
+      margin: 0; 
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+      background: linear-gradient(135deg, #0f172a, var(--bg)); 
+      color: var(--text); 
+      line-height: 1.6; 
+    }
+
+    .container { 
+      max-width: 920px; 
+      margin: 0 auto; 
+      padding: 32px 20px 64px; 
+    }
+
+    header { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      padding: 20px; 
+      background: rgba(255,255,255,0.05); 
+      border: 1px solid rgba(203, 213, 225, 0.25); 
+      border-radius: 16px; 
+      backdrop-filter: blur(6px); 
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3); 
+    }
+
+    h1 { 
+      margin: 0; 
+      font-size: clamp(28px, 4vw, 42px); 
+      letter-spacing: 1px; 
+      color: var(--accent);
+    }
+
+    .badge { 
+      padding: 6px 12px; 
+      border-radius: 999px; 
+      border: 1px solid rgba(203,213,225,0.3); 
+      background: rgba(255,255,255,0.05);
+      color: var(--muted); 
+      font-size: 14px; 
+    }
+
+    .name-block { 
+      margin: 32px 0 20px; 
+      text-align: center; 
+      letter-spacing: 2px; 
+      font-weight: 800; 
+      font-size: clamp(36px, 8vw, 80px); 
+      text-transform: uppercase; 
+      color: var(--accent); 
+      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .grid { 
+      display: grid; 
+      gap: 20px; 
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+      margin-top: 22px; 
+    }
+
+    .card { 
+      background: var(--card); 
+      border: 1px solid rgba(203, 213, 225, 0.2); 
+      border-radius: 16px; 
+      padding: 20px; 
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25); 
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .card h2 { 
+      margin-top: 0; 
+      font-size: 20px; 
+      color: var(--accent);
+    }
+
+    ul { 
+      margin: 0; 
+      padding-left: 18px; 
+    }
+
+    .footer { 
+      margin-top: 32px; 
+      text-align: center; 
+      color: var(--muted); 
+      font-size: 14px; 
+    }
+
+    a { 
+      color: var(--accent); 
+      text-decoration: none; 
+    }
+
+    a:hover { 
+      text-decoration: underline; 
+    } 
+  </style> 
+</head> 
+
+<body> 
+  <div class="container"> 
+    <header> 
+      <h1>Über Mich</h1> 
+      <span class="badge">Stand: <time datetime="2025-09-09">09.09.2025</time></span> 
+    </header> 
+
+    <div class="name-block" aria-label="Name"> 
+      Omar Mohamad 
+    </div> 
+
+    <main class="grid" role="main"> 
+      <section class="card" aria-labelledby="kurz"> 
+        <h2 id="kurz">Kurzprofil</h2> 
+        <p>Ich bin <strong>20 Jahre</strong> alt, hier geboren und habe <strong>11 Jahre im Ausland</strong> gelebt. Meine Eltern kommen aus dem <strong>Irak</strong>. Ich möchte mich in <strong>HTML</strong> verbessern.</p> 
+      </section> 
+
+      <section class="card" aria-labelledby="bildung"> 
+        <h2 id="bildung">Bildung</h2> 
+        <ul> 
+          <li>HTL Donaustadt – Höhere Schule (3 Jahre)</li> 
+        </ul> 
+      </section> 
+
+      <section class="card" aria-labelledby="ziele"> 
+        <h2 id="ziele">Ziele</h2> 
+        <ul> 
+          <li>Sauberen, semantischen HTML-Code schreiben</li> 
+          <li>Eigene kleine Webseiten bauen und veröffentlichen</li> 
+          <li>Grundlagen von CSS &amp; Responsiveness vertiefen</li> 
+        </ul> 
+      </section> 
+
+      <section class="card" aria-labelledby="kontakt"> 
+        <h2 id="kontakt">Kontakt</h2> 
+        <p>Email: <a href="mailto:Omar.moh2004@hotmail.com">Omar.moh2004@hotmail.com</a></p> 
+      </section> 
+    </main> 
+
+    <p class="footer">© <span id="year"></span> Omar Mohamad</p> 
+  </div> 
+
+  <script> 
+    document.getElementById('year').textContent = new Date().getFullYear(); 
+  </script> 
+</body> 
+</html>
