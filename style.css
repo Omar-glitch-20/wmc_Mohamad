@@ -1,0 +1,120 @@
+:root { 
+  --bg: #1e293b;       /* Hintergrund */
+  --card: #334155;     /* Kartenhintergrund */
+  --text: #f1f5f9;     /* Heller Text */
+  --muted: #cbd5e1;    /* Abgeschwächter Text */
+  --accent: #f59e0b;   /* Akzentfarbe (Orange) */
+}
+
+* { box-sizing: border-box; }
+
+body { 
+  margin: 0; 
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+  background: linear-gradient(135deg, #0f172a, var(--bg)); 
+  color: var(--text); 
+  line-height: 1.6; 
+}
+
+.container { 
+  max-width: 920px; 
+  margin: 0 auto; 
+  padding: 32px 20px 64px; 
+}
+
+header { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 20px; 
+  background: rgba(255,255,255,0.05); 
+  border: 1px solid rgba(203, 213, 225, 0.25); 
+  border-radius: 16px; 
+  backdrop-filter: blur(6px); 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3); 
+
+  /* NEU: positioniert */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+h1 { 
+  margin: 0; 
+  font-size: clamp(28px, 4vw, 42px); 
+  letter-spacing: 1px; 
+  color: var(--accent);
+}
+
+.badge { 
+  padding: 6px 12px; 
+  border-radius: 999px; 
+  border: 1px solid rgba(203,213,225,0.3); 
+  background: rgba(255,255,255,0.05);
+  color: var(--muted); 
+  font-size: 14px; 
+
+  /* NEU: absolute Positionierung innerhalb vom Header */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.name-block { 
+  margin: 32px 0 20px; 
+  text-align: center; 
+  letter-spacing: 2px; 
+  font-weight: 800; 
+  font-size: clamp(36px, 8vw, 80px); 
+  text-transform: uppercase; 
+  color: var(--accent); 
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.grid { 
+  display: grid; 
+  gap: 20px; 
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+  margin-top: 22px; 
+}
+
+.card { 
+  background: var(--card); 
+  border: 1px solid rgba(203, 213, 225, 0.2); 
+  border-radius: 16px; 
+  padding: 20px; 
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.card h2 { 
+  margin-top: 0; 
+  font-size: 20px; 
+  color: var(--accent);
+}
+
+ul { 
+  margin: 0; 
+  padding-left: 18px; 
+}
+
+.footer { 
+  margin-top: 32px; 
+  text-align: center; 
+  color: var(--muted); 
+  font-size: 14px; 
+}
+
+a { 
+  color: var(--accent); 
+  text-decoration: none; 
+}
+
+a:hover { 
+  text-decoration: underline; 
+}

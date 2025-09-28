@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de"> 
+<head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Über Mich – Omar Mohamad</title> 
+
+  <!-- CSS einbinden -->
+  <link rel="stylesheet" href="style.css" />
+</head> 
+
+<body> 
+  <div class="container"> 
+    <header> 
+      <h1>Über Mich</h1> 
+      <span class="badge">Stand: <time datetime="2025-09-09">09.09.2025</time></span> 
+    </header> 
+
+    <div class="name-block" aria-label="Name"> 
+      Omar Mohamad 
+    </div> 
+
+    <main class="grid" role="main"> 
+      <section class="card" aria-labelledby="kurz"> 
+        <h2 id="kurz">Kurzprofil</h2> 
+        <p>Ich bin <strong>20 Jahre</strong> alt, hier geboren und habe <strong>11 Jahre im Ausland</strong> gelebt. Meine Eltern kommen aus dem <strong>Irak</strong>. Ich möchte mich in <strong>HTML</strong> verbessern.</p> 
+      </section> 
+
+      <section class="card" aria-labelledby="bildung"> 
+        <h2 id="bildung">Bildung</h2> 
+        <ul> 
+          <li>HTL Donaustadt – Höhere Schule (3 Jahre)</li> 
+        </ul> 
+      </section> 
+
+      <section class="card" aria-labelledby="ziele"> 
+        <h2 id="ziele">Ziele</h2> 
+        <ul> 
+          <li>Sauberen, semantischen HTML-Code schreiben</li> 
+          <li>Eigene kleine Webseiten bauen und veröffentlichen</li> 
+          <li>Grundlagen von CSS &amp; Responsiveness vertiefen</li> 
+        </ul> 
+      </section> 
+
+      <section class="card" aria-labelledby="kontakt"> 
+        <h2 id="kontakt">Kontakt</h2> 
+        <p>Email: <a href="mailto:Omar.moh2004@hotmail.com">Omar.moh2004@hotmail.com</a></p> 
+      </section> 
+    </main> 
+
+    <p class="footer">© <span id="year"></span> Omar Mohamad</p> 
+  </div> 
+
+  <script> 
+    document.getElementById('year').textContent = new Date().getFullYear(); 
+  </script> 
+</body> 
+</html>
