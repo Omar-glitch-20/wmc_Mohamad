@@ -1,0 +1,192 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== FARBEN ========== */
+:root {
+  --lila: #7b2cbf;
+  --lila-hell: #c77dff;
+  --schwarz: #0b0b0f;
+  --grau: #1a1a1f;
+  --weiß: #f5f5f5;
+}
+
+/* ========== BODY ========== */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--schwarz), var(--grau));
+  color: var(--weiß);
+  min-height: 100vh;
+}
+
+/* ========== HEADER ========== */
+.header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: var(--lila-hell);
+}
+
+.header p {
+  opacity: 0.8;
+}
+
+/* ========== NAV (Flexbox) ========== */
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding-bottom: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--weiß);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--lila);
+  transition: width 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ========== GRID LAYOUT ========== */
+.layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ========== CARDS ========== */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 40px rgba(123, 44, 191, 0.3);
+}
+
+/* ========== FOTO-PLATZHALTER ========== */
+.photo {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  border: 2px dashed var(--lila);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lila-hell);
+  margin-bottom: 1.5rem;
+}
+
+/* HIER SPÄTER DEIN FOTO EINBAUEN:
+.photo {
+  background-image: url("meinbild.jpg");
+  background-size: cover;
+  background-position: center;
+}
+*/
+
+/* ========== SKILLS ========== */
+.skills {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.skills a {
+  text-decoration: none;
+  color: var(--weiß);
+}
+
+.skills li {
+  padding: 0.6rem;
+  border-radius: 8px;
+  background: rgba(123, 44, 191, 0.15);
+  transition: background 0.3s;
+}
+
+.skills li:hover {
+  background: rgba(123, 44, 191, 0.35);
+}
+
+/* ========== DETAILS ========== */
+details {
+  margin-top: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--lila-hell);
+  font-weight: 600;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+/* ========== FOTO AUF SPORT-SEITE ========== */
+.sport-photo {
+  height: 300px;
+  background-color: #0b0b0f; /* schwarzer Hintergrund */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sport-photo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* GANZES BILD SICHTBAR */
+  border-radius: 12px;
+}
+
+/* ========== LINK-HINWEIS (Sportlich) ========== */
+.link-hinweis a {
+  color: var(--lila-hell);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-hinweis a::after {
+  content: " (klicken)";
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.link-hinweis a:hover {
+  text-decoration: underline;
+}
